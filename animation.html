@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Css Animation</title>
+    <style>
+        @keyframes sliding {
+            0% {
+                background-color: yellow;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                top: 165px;
+                background-color: red;
+                transform: scale(0.5);
+            }
+
+            50% {
+                top: 0px;
+                background-color: yellow;
+                transform: scale(1);
+            }
+
+            75% {
+                top: 165px;
+                background-color: red;
+                transform: scale(0.5);
+            }
+
+            100% {
+                background-color: red;
+                background-color: yellow;
+                left: 650px;
+                top: 0px;
+            }
+        }
+
+        .box {
+            width: 700px;
+            height: 200px;
+            background-color: aquamarine;
+            border: 2px solid;
+        }
+
+        .child {
+            position: relative;
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            animation: sliding 3s ease-in-out 0.5s infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
